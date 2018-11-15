@@ -1,0 +1,11 @@
+old
+__pycache__
+*.csv.gz
+*.pyc
+*.pyo
+*.png
+src/log
+src/predictions
+data/*
+#model/*
+!.gitkeep

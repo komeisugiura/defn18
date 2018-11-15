@@ -1,0 +1,2 @@
+model_checkpoint_path: "charval2017X_M24_Emodel.ckpt"
+all_model_checkpoint_paths: "charval2017X_M24_Emodel.ckpt"

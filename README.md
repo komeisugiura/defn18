@@ -7,27 +7,39 @@ National Institute of Information and Communications Technology, Japan
 
 * BSD 3-Clause Clear License
 
-## 1. Python version
+## 1. Prerequisite
 
+* Ubuntu 16.04 or 14.04
 * Python 3.4.3
 
 ## 2. Install
 
+* In the following procedure, `~/work` is assumed to be used as a working directory.
+
 ```
+$ cd ~/work/
+$ git clone https://github.com/komeisugiura/defn18.git
+$ cd defn18
 $ pip install -r requirements.txt
 $ pip install --upgrade https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.0.1-cp34-cp34m-linux_x86_64.whl
 ```
 
 ## 3. Download data
 
-* Download data from `http://wdc.nict.go.jp/IONO/wdc/solarflare/index.html`.
+* Visit `http://wdc.nict.go.jp/IONO/wdc/solarflare/index.html` and download `defn_feature_database_v1_pl.zip`.
 
-* `$ cp charval2017X_M24_*.csv.gz data/`
+```
+$ cd ~/work/
+$ mv defn_feature_database_v1_pl.zip ./
+$ unzip defn_feature_database_v1_pl.zip
+(password is required)
+$ ln -s defn_feature_database_v1/defn_input_database/charval2017X_*.csv.gz ./defn18/data/
+```
 
 ## 4. Run
 
 ```
-$ cd src
+$ cd ~/work/src
 $ ./01RUN_deepflarenet.sh
 ```
 
